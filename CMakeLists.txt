@@ -10,6 +10,8 @@ add_executable(RadarTech
         src/Fighter.cpp
         src/Fighter.cpp
         src/Fighter.cpp
+        include/PIDController.h
+        src/PIDController.cpp
 )
 
 target_include_directories(RadarTech PRIVATE include)
