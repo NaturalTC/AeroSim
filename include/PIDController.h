@@ -13,8 +13,12 @@ private:
 
     double integral;
     double previousError;
+
+    double minIntegral;
+    double maxIntegral;
+
 public:
-    PIDController(double p, double i, double d);
+    PIDController(double p, double i, double d, double minI, double maxI);
     double calculate(double setpoint, double measured, double dt);
 };
 

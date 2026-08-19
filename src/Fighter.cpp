@@ -5,7 +5,7 @@
 #include "Fighter.h"
 #include <iostream>
 
-Fighter::Fighter(std::string m, int s, int missiles) : Aircraft(m, s) {
+Fighter::Fighter(std::string m, int s, double a, int missiles) : Aircraft(m, s, a) {
     missileCount = missiles;
 }
 

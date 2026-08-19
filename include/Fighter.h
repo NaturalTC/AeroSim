@@ -9,6 +9,6 @@ class Fighter : public Aircraft {
 private:
     int missileCount;
 public:
-    Fighter(std::string m, int s, int missiles);
+    Fighter(std::string m, int s, double a, int missiles);
     void describe() override;
 };
