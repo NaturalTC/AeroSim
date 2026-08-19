@@ -21,6 +21,7 @@ private:
 public:
     PIDController(double p, double i, double d, double minI, double maxI);
     double calculate(double setpoint, double measured, double dt);
+    double getLastError();
 };
 
 
