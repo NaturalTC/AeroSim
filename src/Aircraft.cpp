@@ -5,9 +5,10 @@
 #include "Aircraft.h"
 #include <iostream>
 
-Aircraft::Aircraft(std::string m, int s) {
+Aircraft::Aircraft(std::string m, int s, double a) {
     model = m;
     speed = s;
+    altitude = a;
 }
 
 void Aircraft::describe() {
@@ -22,10 +23,18 @@ int Aircraft::getSpeed() const {
     return speed;
 }
 
+double Aircraft::getAltitude() const {
+    return altitude;
+}
+
 void Aircraft::setModel(const std::string& model) {
     this->model = model;
 }
 
 void Aircraft::setSpeed(int speed) {
     if (speed > 0) this->speed = speed;
+}
+
+void Aircraft::setAltitude(double altitude) {
+    if (altitude > 0) this->altitude = altitude;
 }
