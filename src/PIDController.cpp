@@ -16,12 +16,16 @@ PIDController::PIDController(double p, double i, double d, double minI, double m
     firstCall = true;
 }
 
+double PIDController::getLastError() {
+    return previousError;
+}
+
 double PIDController::calculate(double setpoint, double measured, double dt) {
     double error = setpoint - measured;
     integral += error * dt;
     integral = std::clamp(integral, minIntegral, maxIntegral);
     double derivative;
-    if (firstCall == true) {
+    if (firstCall) {
         firstCall = false;
         derivative = 0.0;
     } else {
