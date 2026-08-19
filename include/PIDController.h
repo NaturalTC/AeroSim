@@ -17,6 +17,7 @@ private:
     double minIntegral;
     double maxIntegral;
 
+    bool firstCall;
 public:
     PIDController(double p, double i, double d, double minI, double maxI);
     double calculate(double setpoint, double measured, double dt);
