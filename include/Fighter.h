@@ -11,4 +11,5 @@ private:
 public:
     Fighter(std::string m, int s, double a, int missiles);
     void describe() override;
+    void draw(sf::RenderWindow& window, float screenY, float tiltAngle = 0.f) override;
 };
